@@ -1,10 +1,13 @@
 {
-  "name": "app",
+  "name": "@chika/nest-ddd-schematics",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc"
+    "postbuild": "npm run copy:collection && npm run copy:resource",
+    "build": "rm -rf dist && tsc --project tsconfig.lib.json",
+    "copy:collection": "cpx src/collection.json dist && cpx src/resource/schema.json dist/resource",
+    "copy:resource": "cpx 'src/resource/files/**/*' dist/resource/files"
   },
   "keywords": [],
   "author": "",
@@ -12,10 +15,12 @@
   "dependencies": {
     "@angular-devkit/core": "^19.0.4",
     "@angular-devkit/schematics": "^19.0.4",
+    "cpx": "^1.5.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@angular-devkit/schematics-cli": "^19.0.4"
-  }
+  },
+  "schematics": "./dist/collection.json"
 }

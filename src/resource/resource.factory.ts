@@ -3,7 +3,6 @@ import { ResourceOptions } from "./resource.schema";
 import { strings } from "@angular-devkit/core";
 
 export function main(options: ResourceOptions): Rule {
-  console.log('Options:', options);
     return (tree: Tree, _context: SchematicContext) => {
       const templateSource = apply(url('./files'), [
         template({

@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "id": "Resource",
+    "$id": "Resource",
     "title": "DDD Resource Schema",
     "type": "object",
     "properties": {
