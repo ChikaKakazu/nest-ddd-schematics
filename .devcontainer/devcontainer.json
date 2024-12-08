@@ -1,0 +1,23 @@
+{
+    "name": "nestjs schematics Dev Container",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "schematics",
+    "workspaceFolder": "/usr/src/app",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash",
+          "editor.formatOnSave": true
+        },
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "dsznajder.es7-react-js-snippets",
+          "streetsidesoftware.code-spell-checker",
+          "mosapride.zenkaku"
+        ]
+      }
+    },
+    "postCreateCommand": "npm install"
+  }
+  

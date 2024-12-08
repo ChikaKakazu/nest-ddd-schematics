@@ -1,0 +1,14 @@
+version: "3"
+services:
+  schematics:
+    container_name: schematics
+    build: .
+    tty: true
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - schematics_net
+
+networks:
+  schematics_net:
+    name: schematics_net

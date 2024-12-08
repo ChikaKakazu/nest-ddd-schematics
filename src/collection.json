@@ -1,0 +1,10 @@
+{
+    "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+        "resource": {
+        "description": "Generate DDD resource",
+        "factory": "./resource/resource.factory#main",
+        "schema": "./resource/schema.json"
+        }
+    }
+}
